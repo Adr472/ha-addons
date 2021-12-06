@@ -8,6 +8,9 @@ configuration:
   latency:
     name: Latency
     description: ebusd --latency=MSEC Transfer latency in ms [0 for USB, 10 for IP]
+  configpath:
+    name: Config Path
+    description: ebusd --configpath=/path Leave empty to download latest config from github or enter physical path to config repo
   readonly:
     name: Read Only
     description: Only read from device, never write to it

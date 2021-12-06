@@ -1,5 +1,5 @@
 name: eBUSd
-version: "0.82"
+version: "0.83"
 slug: ebusd
 description: >
   This Add-on runs eBUSd, a daemon for handling communication with eBUS devices
@@ -13,6 +13,8 @@ arch:
   - amd64
   - i386
 init: false
+map:
+  - share:rw
 startup: "system"
 boot: "auto"
 uart: true
@@ -23,6 +25,7 @@ schema:
   device: "str"
   port: "port?"
   latency: "int(0,10000)?"
+  configpath: "str?"
   readonly: "bool?"
   foreground: "bool?"
   scanconfig: "bool?"
