@@ -17,6 +17,9 @@ configuration:
   scanconfig:
     name: Scan Config
     description: Pick CSV config files matching initial scan (ADDR="none" or empty for no initial scan message "full" for full scan, or a single hex address to scan, default is to send a broadcast ident message).
+  enabledefine:
+    name: enabledefine
+    description: Activates enabledefine.
   logareas:
     name: Log Area
     description: Only write log for matching AREA
