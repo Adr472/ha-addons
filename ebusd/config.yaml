@@ -19,6 +19,7 @@ uart: true
 options:
   scanconfig: true
   foreground: true
+  enabledefine: true
 schema:
   device: "str"
   port: "port?"
@@ -26,6 +27,7 @@ schema:
   readonly: "bool?"
   foreground: "bool?"
   scanconfig: "bool?"
+  enabledefine: "bool?"
   logareas: "list(main|network|bus|update|all)?"
   loglevel: "list(error|notice|info|debug)?"
   mqtthost: "str?"
