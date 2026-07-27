@@ -1,4 +1,4 @@
-ARG BUILD_FROM
+ARG BUILD_FROM=ghcr.io/home-assistant/amd64-base:3.18
 FROM $BUILD_FROM as builder
 
 ENV LANG C.UTF-8
@@ -14,6 +14,7 @@ WORKDIR /build
 
 RUN git clone https://github.com/john30/ebusd.git /build && cmake . && make
 
+ARG BUILD_FROM=ghcr.io/home-assistant/amd64-base:3.18
 FROM $BUILD_FROM
 
 LABEL Description="ebusd"
