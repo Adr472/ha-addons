@@ -1,7 +1,7 @@
 ARG BUILD_FROM=ghcr.io/home-assistant/amd64-base:3.18
-FROM $BUILD_FROM as builder
+FROM $BUILD_FROM AS builder
 
-ENV LANG C.UTF-8
+ENV LANG=C.UTF-8
 
 RUN apk add --no-cache \
     build-base \
@@ -25,7 +25,7 @@ RUN apk add --no-cache \
     mosquitto-dev
 
 COPY --from=builder /build/src/ebusd/ebusd /usr/local/bin/ebusd
-COPY --from=builder /build/src/tools/ebusctl /usr/local/bin/ebusctl
+COPY --from=builder /build/src/tools/ebusctl/ebusctl /usr/local/bin/ebusctl
 
 WORKDIR /
 
