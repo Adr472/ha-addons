@@ -1,6 +1,6 @@
 name: eBUSd
 version: "0.83"
-slug: ebusd
+slug: ebusd_472
 description: >
   This Add-on runs eBUSd, a daemon for handling communication with eBUS devices
   connected to a 2-wire bus system (“energy bus” used by numerous heating systems)
